@@ -1,0 +1,2 @@
+			document.emailForm.text.value="Enquiry Type: "+document.emailForm.enquiry_type.value+"<br />"+document.emailForm.text.value;
+			

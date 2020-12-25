@@ -1,0 +1,1 @@
+<img src="components/com_virtuemart/shop_image/category_banner_<?php echo $category_id ?>.jpg" /> <br />

@@ -1,0 +1,13 @@
+<script type="text/javascript" language="javascript">
+function ToggleCompany(el) {
+	if (el.checked) {
+		$("company_div").style.display="none";
+		$("company_input").style.display="none";
+		$("company_br").style.display="none";
+	} else {
+		$("company_div").style.display="block";
+		$("company_input").style.display="block";
+		$("company_br").style.display="block";
+	}
+}
+</script>

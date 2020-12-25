@@ -1,0 +1,9 @@
+   <div style="float: left;width:60px;text-align:right;margin:3px;">
+        <label for="<?php echo $attribute['titlevar'] ?>_field"><?php echo $attribute['title'] ?>
+        </label>:
+    </div>
+    <div class="vmAttribChildDetail" style="float:left;width:60%;margin:3px;">
+        <textarea class="inputboxattrib" id="<?php echo $attribute['titlevar'] ?>_field" rows="5" cols=30" 
+				name="<?php echo $attribute['titlevar'].$attribute['product_id'] ?>">
+		</textarea>
+    </div>	

@@ -1,0 +1,26 @@
+if(  PSHOP_AGREE_TO_TOS_ONORDER == '1' ) {
+	echo vmCommonHTML::scriptTag('', "function submit_order( form ) 
+		if (!form.shipping_date.value) {
+			alert (\"Please select a date.\");
+			return false
+		} else {
+			form.customer_note.value=\”Shipping Date: \”+form.shipping_date.value;
+		}
+    if (!form.agreed.checked) {
+        alert( \"". $VM_LANG->_('PHPSHOP_AGREE_TO_TOS',false) ."\" );
+        return false;
+    }
+    else {
+        return true;
+    }
+}" );
+} else {
+	echo vmCommonHTML::scriptTag('', "function submit_order( form ) {
+		if (!form.shipping_date.value) {
+			alert (\"Please select a date.\");
+			return false
+		} else {
+			form.customer_note.value=\”Shipping Date: \”+form.shipping_date.value;
+		}
+}" );
+}

@@ -1,0 +1,6 @@
+<?php
+	if ($category_id==1 || $category_id==3) {
+		echo $this->fetch( 'browse/includes/browse_listtable.tpl.php' );
+		return;
+	}
+?>

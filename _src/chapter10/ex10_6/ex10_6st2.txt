@@ -1,0 +1,25 @@
+<?php
+// code adapted from modules/mod_virtueupload/mod_virtueupload.php
+if(!file_exists(JPATH_SITE.DS."components".DS."com_virtueupload".DS."virtueupload.php")) {
+	return '';
+}
+require_once (JPATH_ADMINISTRATOR.DS.'components'.DS.'com_virtueupload'.DS.'classes'.DS.'output.class.php');
+$config 		= VUOutput::config();
+$user 			=& JFactory::getUser();
+$document		=& JFactory::getDocument();
+$jscript		= '';
+$msg			= JRequest::getVar('msg', '');
+$upload_id		= JRequest::getInt('upload_id', 0);
+$uploadinfo 	= false;
+if ($upload_id) {
+	$uploadinfo = VUOutput::UploadInfoId($upload_id, 'module'); //original code to get html for display in frontend
+}
+
+$form->status  	= VUOutput::getStatus($msg);
+$form->ip 		= $_SERVER['REMOTE_ADDR'];
+$form->session_id 	= session_id();
+$form->uri_url	= VUOutput::_getUriString();
+$form->prod_id	= JRequest::getInt('product_id', 0);
+$form->cat_id	= JRequest::getInt('category_id', 0);
+// code adapted from modules/mod_virtueupload/mod_virtueupload.php ends
+?>

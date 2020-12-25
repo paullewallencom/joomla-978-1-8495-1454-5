@@ -1,0 +1,7 @@
+<?php 
+	$myTemplate = $_REQUEST['productsnapshot_template'];
+	if ($myTemplate!='productsnapshot.tpl' && file_exists(dirname(__FILE__).'/'.$myTemplate.'.php')) {
+		include (dirname(__FILE__).'/'.$myTemplate.'.php');
+		return;
+	}
+?>

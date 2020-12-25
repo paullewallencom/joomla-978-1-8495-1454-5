@@ -1,0 +1,6 @@
+<?php
+	$order_id=sprintf("%08d", $db->f("order_id"));
+	$order_date=vmFormatDate($db->f("cdate")+$time_offset);
+	$order_status=ps_order_status::getOrderStatusName( $db->f("order_status") );
+	include( $this->path.'/order_emails/includes/order_ info.tpl.php'); 
+?>

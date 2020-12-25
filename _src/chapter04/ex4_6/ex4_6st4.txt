@@ -1,0 +1,18 @@
+		<table>
+    <?php if($display_header == "Y") { ?>
+        <tr class="vmCartChildHeading<?php echo $cls_suffix ?>">
+            <td style="float: left;width: <?php echo $desc_width ?>;"><?php echo $VM_LANG->_('PHPSHOP_PRODUCT_DESC_TITLE') ?></td >
+            <?php //Ouput Each Attribute Heading
+            foreach($headings as $key => $value) { ?>
+                <td style="width: <?php echo $attrib_width ?>;" ><?php echo $headings[$key] ?></td>
+            <?php } ?>
+            <td style="width: 15%;"><?php echo $VM_LANG->_('PHPSHOP_CART_QUANTITY') ?></td>
+            <td style="width: 12%;"><?php echo $VM_LANG->_('PHPSHOP_PRODUCT_INVENTORY_PRICE') ?></td>
+        if ($display_product_type == "Y" && $product['product_type'] != "") { ?>    
+			<td> &nbsp; </td>
+		<?php } ?>
+      <?php if(USE_AS_CATALOGUE != '1' && ($product['advanced_attribute'] != "" || $product['custom_attribute'] != "")) { ?>
+			<td> &nbsp; </td>
+		<?php } ?>
+        </tr>
+    <?php }

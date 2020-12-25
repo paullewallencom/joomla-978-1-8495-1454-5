@@ -1,0 +1,4 @@
+$allow_shopper_groups = array (6,7,8,9,10);
+$auth=$_SESSION['auth'];
+$shopper_group=$auth['shopper_group_id'];
+if (in_array($shopper_group,$allow_shopper_groups)) {

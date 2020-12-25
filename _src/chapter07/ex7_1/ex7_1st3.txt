@@ -1,0 +1,11 @@
+	<?php
+		$checkout_link=str_replace(
+			'page=shop.cart',
+			'page=checkout.index',
+			$show_cart);
+		$checkout_link=str_replace(
+			$VM_LANG->_('PHPSHOP_CART_SHOW'),
+			$VM_LANG->_('PHPSHOP_CHECKOUT_TITLE'),
+			$checkout_link);
+		echo '&nbsp;&nbsp;'.$checkout_link;
+	?>

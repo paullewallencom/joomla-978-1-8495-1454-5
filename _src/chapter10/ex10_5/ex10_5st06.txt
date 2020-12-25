@@ -1,0 +1,6 @@
+		$relative_path='attribute/'.strtolower($attribute['titlevar']);
+		$attribute_image_path = IMAGEPATH.$relative_path;
+		if (file_exists($attribute_image_path) && is_dir($attribute_image_path)) {
+			$has_image=true;
+			$attribute_image_url = IMAGEURL.$relative_path;
+		}

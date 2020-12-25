@@ -1,0 +1,7 @@
+	function insertJoomlaArticle( $id ) {
+		$db = new ps_DB;
+		$q = "SELECT CONCAT(`introtext`,' ',`fulltext`) FROM #__content WHERE id='$id'";
+		$db->setQuery($q);
+		$text = $db->loadResult();
+		return $text;
+	}

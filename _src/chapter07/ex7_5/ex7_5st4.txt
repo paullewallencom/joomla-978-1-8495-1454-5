@@ -1,0 +1,13 @@
+	?>
+	<td style="width:150px;text-align:top;padding:0px;vertical-align:top" >
+         <a title="<?php echo $featured["product_name"] ?>" href="<?php $sess->purl(URL."index.php?option=com_virtuemart&amp;page=shop.product_details&amp;flypage=".$featured["flypage"]."&amp;product_id=".$featured["product_id"]) ?>"> 
+			<h4><?php echo $featured["product_name"] ?></h4></a>
+			<?php echo $featured['product_price'] ?><br /> 
+            <?php
+			if ( $featured["product_thumb"] ) { ?> 
+                <a title="<?php echo $featured["product_name"] ?>" href="<?php $sess->purl(URL."index.php?option=com_virtuemart&amp;page=shop.product_details&amp;flypage=".$featured["flypage"]."&amp;product_id=".$featured["product_id"]) ?>"> 
+				<?php echo ps_product::image_tag( $featured["product_thumb"], "class=\"browseProductImage\" border=\"0\" alt=\"".$featured["product_name"]."\"");
+				?></a><br /><br/> 
+            <?php
+			}?> 	</td>
+<?php

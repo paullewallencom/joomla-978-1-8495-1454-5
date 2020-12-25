@@ -1,0 +1,1 @@
+$_REQUEST['productsnapshot_template']=$params->get( 'template', 'productsnapshot.tpl' );

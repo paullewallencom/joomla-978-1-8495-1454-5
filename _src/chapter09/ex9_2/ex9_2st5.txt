@@ -1,0 +1,11 @@
+		<param 
+			name="cssStyle" type="filelist" 
+			default="white.css" 
+				directory="/components/com_virtuemart/themes/packtpub/css" 
+			filter="\.css$"
+			hide_none="1"
+			hide_default="1"
+			label="Color Scheme"
+			description="Select the Color Scheme"
+		/>
+		

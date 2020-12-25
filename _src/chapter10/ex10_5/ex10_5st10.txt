@@ -1,0 +1,10 @@
+<?php
+	$custom_product_image=IMAGEURL.'product/'.strtolower($product_name);
+?>
+<script type="text/javascript">
+	var product_image="<?php echo $custom_product_image ?>";
+	var VM_ChangeImage=function(option) {
+		$("VM_Image").src=product_image+"_"+option+".jpg";
+	}
+</script>
+

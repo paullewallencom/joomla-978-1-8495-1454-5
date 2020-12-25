@@ -1,0 +1,8 @@
+	function fetch($file) {
+		$content=parent::fetch($file);
+		if ($this->get_cfg('reflectionFlypage',1)) {
+			$contents=vmCommonHTML::ParseContentByPlugins($contents);
+		}
+		return $contents;              // Return the contents
+	}
+

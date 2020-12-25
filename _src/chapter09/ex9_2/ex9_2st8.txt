@@ -1,0 +1,3 @@
+		global $vm_mainframe;
+		$colorStyle =$this->get_cfg('cssStyle','white.css');
+		$vm_mainframe->addStyleSheet( VM_THEMEURL.'css/'.$colorStyle );		

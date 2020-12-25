@@ -1,0 +1,14 @@
+// adding thumb image
+$db1 = new ps_DB;
+$thumb_width=50;
+$thumb_height=50;
+$frontend_url= str_replace('shop_image/','',IMAGEURL);
+for ($i=0;$i<count($product_rows);$i++) {
+	$q1 = "SELECT product_full_image 
+		FROM #__{vm}_product 
+		WHERE product_sku='".$product_rows[$i]['product_sku']."'
+	";
+	$db1->setQuery($q1);
+	$product_image=$db1->loadResult();	$product_rows[$i]['product_thumb']='<img src="'.$frontend_url.'show_image_in_imgtag.php?filename='.$product_image
+		.'&newxsize='.$thumb_width.'&newysize='.$thumb_height.'" />';
+}

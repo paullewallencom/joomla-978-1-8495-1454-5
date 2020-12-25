@@ -1,0 +1,5 @@
+       <input type="radio" id="<?php echo $attribute['titlevar']. $i ?>_field" 
+				name="<?php echo $attribute['titlevar'].$attribute['product_id'] ?>" 
+				value="<?php echo $options_item['base_var'] ?>"
+				<?php echo $onclick ?> />
+			<label for="<?php echo $attribute['titlevar']. $i ?>_field">

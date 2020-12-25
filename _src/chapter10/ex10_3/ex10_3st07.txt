@@ -1,0 +1,6 @@
+<?php
+	if (!$is_email_to_shopper ) {
+		echo '<div style="font-size:14pt;color:red">'.$VM_LANG->_('PHPSHOP_ORDER_PRINT_PO_STATUS').
+			': '.$order_status.'</div>';
+	}
+?>

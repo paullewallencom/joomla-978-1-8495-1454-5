@@ -1,0 +1,2 @@
+        <td align="center"colspan="2">
+		<img src="<?php echo IMAGEURL ?>manufacturer_logo_<?php echo $db->f('manufacturer_id') ?>.png" /> 

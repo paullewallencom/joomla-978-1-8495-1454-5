@@ -1,0 +1,3 @@
+	<label for="enquiry_type ">Enquiry Type</label><br />
+	<br /><input type="radio" id="enquiry_type_1" name="enquiry_type" class="inputbox" value="Gneral" checked="checked">
+	<br /><input type="radio" id="enquiry_type_2" name="enquiry_type" class="inputbox" value="Sample Request">

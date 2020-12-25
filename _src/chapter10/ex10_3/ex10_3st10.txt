@@ -1,0 +1,6 @@
+		<?php	
+		$product_thumb_image=$ps_product->get_field($dboi->f("product_id"), "product_thumb_image");
+		$product_image=$ps_product->image_tag($product_thumb_image, '', 0);	
+		echo '<br />'.$product_image;
+		?>
+		</td>

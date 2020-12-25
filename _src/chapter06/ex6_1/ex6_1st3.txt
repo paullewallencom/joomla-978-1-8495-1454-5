@@ -1,0 +1,1 @@
+	<td><?php echo $product['product_thumb'] ?></td>;

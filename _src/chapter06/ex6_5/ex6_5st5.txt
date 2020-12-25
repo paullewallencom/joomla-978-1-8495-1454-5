@@ -1,0 +1,11 @@
+<?php 
+ob_start();
+include(PAGEPATH. 'checkout_register_form.php'); 
+$html = ob_get_contents();
+ob_end_clean();
+$html = str_replace('name="vm_private" id="vm_private_field"',
+	'name="vm_private" id="vm_private_field" onclick="ToggleCompany(this)"',$html);
+$html = str_replace('<br style="clear:both;" /><div id="company_div"',
+	'<br id="company_br" style="clear:both;" /><div id="company_div"',$html);
+echo $html;
+?>

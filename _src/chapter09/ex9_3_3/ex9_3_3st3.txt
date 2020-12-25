@@ -1,0 +1,17 @@
+	if ($this->get_cfg('flypageRelection',1)) {
+		$product_thumb = str_replace('<img','<img class=" reflectFlypage "',$product_thumb);
+		if (!defined('VM_REFLECTION_SCRIPT_FLYPAGE')) {
+			echo '
+<script language="javascript" type="text/javascript">
+window.addEvent("domready", function() {
+	$$($$("img").filter(function(img) { return img.hasClass("reflectFlypage"); })).reflect(
+	{
+		height:'.$this->get_cfg('reflectionHeight',0.5).',
+		opacity:0.5
+	});
+});
+</script>
+			';
+			define ('VM_REFLECTION_SCRIPT_FLYPAGE',1);
+		}
+	}

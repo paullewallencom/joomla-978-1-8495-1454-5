@@ -1,0 +1,6 @@
+		<param name="useContentPlugin" type="radio" default="1" label="enabled Content Plugins?" 
+			description="Enable Content Plugin parsing of templates.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+

@@ -1,0 +1,7 @@
+<?php 
+$manufacturer_id=$_REQUEST['manufacturer_id'];
+$manufacturer_link=URL.'index.php?option=com_virtuemart&page=shop.manufacturer_page&manufacturer_id='.$manufacturer_id;
+$manufacturer_banner=IMAGEURL.'manufacturer_banner_'.$manufacturer_id.'.png';
+?>
+<h3><a href="<?php echo $manufacturer_link ?>"><?php echo $browsepage_lbl ?></a></h3>
+<div><img src="<?php echo $manufacturer_banner ?>" /></div>

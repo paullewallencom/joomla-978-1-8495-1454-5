@@ -1,0 +1,32 @@
+?>
+		<style type="text/css">
+			.visibleCart {
+				display:block;
+				border:1px solid black;
+				padding:2px;
+				position:absolute;
+				background:white;
+				width:150px
+			}
+			.hiddenCart {
+				display:none
+			}
+			#vm_cart_button {
+				background:#333; 
+				border:1px solid black;
+				color:white;
+				padding:2px;
+				cursor:auto;
+				width:150px
+			}
+		</style>
+		<script language="javascript" type="text/javascript">
+			function ToggleCart() {
+				var myCart = $("vm_cart_dropdown");
+				if (myCart.className=="hiddenCart") myCart.className="visibleCart";
+				else myCart.className="hiddenCart";
+			}
+		</script>
+		<div id="vm_cart_button" onclick="ToggleCart()">Mini Cart</div>
+		<div id="vm_cart_dropdown" class="hiddenCart">
+<?php 

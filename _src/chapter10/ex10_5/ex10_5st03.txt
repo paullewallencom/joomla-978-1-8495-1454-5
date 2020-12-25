@@ -1,0 +1,9 @@
+			<?
+				if ($has_image) {
+					echo '<br />
+						<img class="attribute_image" src="'.$attribute_image_url.$option_value.'.jpg" />
+						<br />
+					';
+				}
+			?>
+			</label>

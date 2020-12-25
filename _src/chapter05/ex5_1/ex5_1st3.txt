@@ -1,0 +1,3 @@
+.addtocart_button {
+	background: url( 'images/add-to-cart_blue1.gif' ) no-repeat  center transparent;
+}

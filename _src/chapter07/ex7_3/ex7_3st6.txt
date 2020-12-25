@@ -1,0 +1,7 @@
+<?php
+		echo '<div>Weight: ';
+		$product_weight=ps_product::get_field( $product_id,'product_weight'); 
+		$product_weight_uom=ps_product::get_field( $product_id,'product_weight_uom'); 
+		echo number_format($product_weight,1).' '.$product_weight_uom;
+		echo '</div>';
+?>

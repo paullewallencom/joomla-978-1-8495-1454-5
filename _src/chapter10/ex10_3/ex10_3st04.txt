@@ -1,0 +1,2 @@
+    <td class="Stil1"><?php echo $payment_info_details ?></td>
+    <td class="Stil1"><?php echo $shipping_info_details ?></td>

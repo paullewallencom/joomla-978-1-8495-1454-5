@@ -1,0 +1,1 @@
+<?php include( $this->path.'/order_emails/includes/order_shipping_info.tpl.php'); ?>

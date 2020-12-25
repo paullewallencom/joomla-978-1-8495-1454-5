@@ -1,0 +1,9 @@
+<script type="text/javascript" language="javascript">
+	function ToggleAddresses(el) {
+		var labels = $$(".label_address_active");
+		for (var i=0; i<labels.length;i++) {
+			labels[i].className="label_address";
+		}
+		$("label_"+el.value).className="label_address_active";
+	}
+</script>

@@ -1,0 +1,11 @@
+        <?php 
+			if ($form_addtocart)
+				echo $form_addtocart;
+			else {
+				$button_lbl = $VM_LANG->_('PHPSHOP_CART_ADD_TO');
+				$button_cls = 'addtocart_button';
+		  ?>
+    			<input type="button" class="<?php echo $button_cls ?>" value="<?php echo $button_lbl	?>" title="<?php echo $button_lbl ?>" onclick="location='<?php echo $product_flypage ?>'" />
+		  <?php		
+			}
+		  ?>

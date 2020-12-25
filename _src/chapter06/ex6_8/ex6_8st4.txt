@@ -1,0 +1,1 @@
+<?php echo JHTML::calendar('','shipping_date','shipping_date'); ?>

@@ -1,0 +1,10 @@
+<?php
+// most of the codes are adapted from the the original VirtueUpload codes.
+// you need to have VirtueUpload component installed to have the code working
+
+defined( '_JEXEC' ) or die( 'Restricted access' );
+
+$upload_attr='Image_Id_field';
+$upload_desc_attr='Image_File_Name_field';
+ob_start();
+?>

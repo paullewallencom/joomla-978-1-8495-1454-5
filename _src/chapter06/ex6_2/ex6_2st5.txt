@@ -1,0 +1,23 @@
+
+function updateCart() {
+	var callbackCart = function(responseText) {
+		$("vmMainPage").innerHTML=responseText;
+	}
+	var option = { method: 'post', onComplete: callbackCart, data: { only_page:1,page: "shop.cart", option: "com_virtuemart" } }
+	new Ajax( live_site + '/index2.php', option).request();
+}
+
+function handleUpdateCart( frm ) { 
+	formCartAdd = $( frm );
+	var callback = function(responseText) {
+		updateCart();
+		updateMiniCarts();
+	}
+	var opt = {
+	    method: 'post',
+	    data: $(frm),
+	    onComplete: callback,
+	    evalScripts: true
+	}
+	new Ajax(formCartAdd.action, opt).request();
+}

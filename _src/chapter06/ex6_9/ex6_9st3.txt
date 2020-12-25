@@ -1,0 +1,7 @@
+	<?php
+		global $CURRENCY_DISPLAY;
+		echo '<br /><br />';
+		echo 'Order Number: '.$db->f('order_id');
+		echo '<br />Order Total: '. $CURRENCY_DISPLAY->getFullValue( $db->f('order_total'));
+		echo '<br />Customer Note: '.$db->f('customer_note');
+	?>

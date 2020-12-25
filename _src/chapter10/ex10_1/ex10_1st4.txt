@@ -1,0 +1,6 @@
+		<param name="pauseAfterEmail" type="radio" default="0" label="Pause VM after order email" 
+			description="Pause VM after order email to allow testing of confirmation_email template.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+

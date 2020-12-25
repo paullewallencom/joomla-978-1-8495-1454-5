@@ -1,0 +1,8 @@
+<?php
+// use ajax to update cart if on shop cart page
+if ($_REQUEST['page']=='shop.cart') {
+	$product['update_form']=str_replace('<form ',
+			'<form onsubmit="handleUpdateCart( this );return false;"',
+			$product['update_form']);
+}
+?>

@@ -1,0 +1,11 @@
+<?php
+		$i=0;
+		foreach ( $attribute['options_list'] as options_item ) : ?>
+        <input type="radio" id="<?php echo $attribute['titlevar']. $i ?>_field" name="<?php echo $attribute['titlevar'].$attribute['product_id'] ?>" value="<?php echo $options_item['base_var'] ?>">
+	        <?php if( isset( $options_item['display_price']) ) : ?>
+	        <?php echo $options_item['base_value'] ?> (<?php echo $options_item['sign'].$options_item['display_price'] ?>)
+	        <?php else : ?>
+	       <?php echo $options_item['base_value'] ?>
+	        <?php endif; ?>
+        <?php $i++;
+		endforeach; ?>	

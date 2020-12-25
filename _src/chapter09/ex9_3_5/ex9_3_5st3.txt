@@ -1,0 +1,23 @@
+	<?php 
+	$image_attribute = 'alt="'.$product_name.'"';
+	if ($this->get_cfg('snapshotRelection',1)) {
+		$image_attribute = 'class="reflectSnapshot" '.$image_attribute; 
+		if (!defined('VM_REFLECTION_SCRIPT_SNAPSHOT ')) {
+			echo '
+<script language="javascript" type="text/javascript">
+window.addEvent("domready", function() {
+	$$($$("img").filter(function(img) { return img.hasClass("reflectSnapshot "); })).reflect(
+	{
+		height:'.$this->get_cfg('reflectionHeight',0.5).',
+		opacity:0.5
+	});
+});
+</script>
+			';
+			define ('VM_REFLECTION_SCRIPT_SNAPSHOT',1);
+		}
+	}
+
+		// Print the product image or the "no image available" image
+		echo ps_product::image_tag( $product_thumb_image, $image_attribute);
+	?>

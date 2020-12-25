@@ -1,0 +1,7 @@
+		<?php
+			foreach ($files as $file) {
+				if ($file->file_extension=='pdf') {
+					echo '<a href="'.$file->filename.'"><img src="images/M_images/pdf_button.png" />'.$file->file_title.'</a>';
+				}
+			}
+		?>

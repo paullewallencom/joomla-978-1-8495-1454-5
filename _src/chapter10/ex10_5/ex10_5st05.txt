@@ -1,0 +1,7 @@
+		<?php
+			$onclick='';
+			if ($has_image) {
+				$option_value=strtolower($options_item['base_var']);
+				$onclick='onclick="if (window.VM_ChangeImage) VM_ChangeImage(\''.$option_value.'\')"';
+			}
+		?>

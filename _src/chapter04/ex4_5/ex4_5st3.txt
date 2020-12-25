@@ -1,0 +1,4 @@
+	<?php 
+		$product_rating = ps_reviews::allvotes( $product_id );
+		echo $product_rating . '<br />';
+	?>

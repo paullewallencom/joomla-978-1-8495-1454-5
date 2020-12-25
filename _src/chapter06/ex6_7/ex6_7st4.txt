@@ -1,0 +1,7 @@
+echo '<fieldset>
+	<legend>Paypal Related</legend>
+	<div id="paypalrelated_payments">
+';
+$ps_payment_method->list_paypalrelated($payment_method_id,  false); 
+echo '</div>
+</fieldset>';

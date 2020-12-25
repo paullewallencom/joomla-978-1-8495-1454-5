@@ -1,0 +1,3 @@
+  	Weight: <?php echo number_format($product_weight,1) . ' ' . $product_weight_uom ?><br />
+		Size: <?php echo number_format($product_length,2) . ' ' . $product_lwh_uom ?><br />
+		Stock: <?php echo $product_in_stock ?><br />

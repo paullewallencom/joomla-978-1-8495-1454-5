@@ -1,0 +1,1 @@
+<td align="center" valign="top" rowspan="4"><img src="<?php echo IMAGEURL.'product/'.strtolower($product_name).'.jpg' ?>" /></td>

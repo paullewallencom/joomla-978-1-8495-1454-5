@@ -1,0 +1,49 @@
+<?php
+//keep session alive while editing
+JHTML::_('behavior.keepalive');
+//javascript statusinput
+echo $form->status;
+$inputsize = 2;
+$none = 'none';
+if ($upload_id) {
+	$uploadfile = VUOutput::UploadInfoId($upload_id); 
+}
+$upload_desc = $uploadfile->file_name;
+?>
+<script type='text/javascript'>
+	var upload_id=<?php echo $upload_id ?>;
+	var upload_desc="<?php echo $upload_desc ?>";
+	window.addEvent('domready',function(){
+		var uploadattr =  $("<?php echo $upload_attr ?>");
+		var uploaddescattr =  $("<?php echo $upload_desc_attr ?>");
+		if (uploadattr) {
+			uploadattr.readOnly = true;
+			uploadattr.className = 'readonly';
+			uploadattr.size = <?php echo $inputsize ?>;
+			if (uploadattr.value == '') {
+				uploadattr.value = "<?php echo $none ?>";
+			}
+			if (upload_id) {
+				uploadattr.value = upload_id;
+			}
+		}
+		if (uploaddescattr) {
+			uploaddescattr.readOnly = true;
+			uploaddescattr.className = 'readonly';
+			if (upload_id) {
+				uploaddescattr.value = upload_desc;
+			}
+		}
+	});	
+</script>
+</div>
+<style type="text/css">
+	#virtueupl_form {border:1px solid silver;margin:10px;padding:10px;margin-left:0}
+</style>
+<?php
+// code adapted from modules/mod_virtueupload/tmpl/default.php ends
+
+$virtue_upload_html = ob_get_contents();
+ob_end_clean();
+return $virtue_upload_html;
+?>

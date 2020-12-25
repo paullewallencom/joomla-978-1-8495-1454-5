@@ -1,0 +1,3 @@
+		if ($this->get_cfg('reflectionFlypage',1) || $this->get_cfg('reflectionBrowse',1) || $this->get_cfg('reflectionSnapshot',1)) {
+			$vm_mainframe->addScript( VM_THEMEURL.'reflection.js' );
+		}

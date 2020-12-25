@@ -1,0 +1,4 @@
+		<param name="template" type="filelist" default="productsnapshot.tpl" 
+			label="Snapshot Template" description="Template to use to create the snapshot"
+			directory="components/com_virtuemart/themes/default/templates/common" 
+			filter="productsnapshot" exclude="" stripext="1" />

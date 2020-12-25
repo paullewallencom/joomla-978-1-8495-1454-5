@@ -1,0 +1,14 @@
+<?php if (!defined('PRODUCTSNAPSHOT_CSS')) { 
+	define('PRODUCTSNAPSHOT_CSS',1);
+?> 
+<style type="text/css">
+ .productsnapshot_container {
+	padding:5px;
+	border:1px solid #ccc
+}
+.productsnapshot_container div {
+	text-align:center !important;
+}
+</style>
+<?php } ?>
+<div class="productsnapshot_container">

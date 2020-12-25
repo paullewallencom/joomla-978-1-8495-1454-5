@@ -1,0 +1,1 @@
+<div><?php echo $VM_LANG->_(‘VM_MANUFACTURER_HEADER’) ?></div> 

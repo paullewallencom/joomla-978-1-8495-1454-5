@@ -1,0 +1,26 @@
+?>
+<script language="JavaScript" type="text/javascript">//<![CDATA[
+	var maxLength=10;
+	var maxExceededMessage="Maximum length exceeded";
+	var script1="if (checkForm(this)==false) return false;";
+	var script2="handleAddToCart( this.id );return false;";
+	var scriptAdded=false;
+	function checkForm(frm) {
+		for (var i=0; i<frm.elements.length; i++) {
+			var el=frm.elements[i];
+			if (el.tagName=="TEXTAREA" && el.value.length > maxLength) {
+						alert(maxExceededMessage);
+						return false;
+			}
+		}
+		return true;
+	}
+	function addScript(el) {
+		if (scriptAdded) return;
+		var frm=el.form;
+		frm.onsubmit=new Function("event",script1+script2);
+		scriptAdded=true;
+	}
+	//]]>
+	</script>
+<?php

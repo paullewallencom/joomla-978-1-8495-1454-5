@@ -1,0 +1,19 @@
+<?php 
+	$db1 = new ps_DB;
+	$q1 = "SELECT * 
+		FROM #__{vm}_manufacturer
+		ORDER BY mf_name
+	";
+	$db1->query($q1);
+	echo '<div><b>Manufacturers</b></div>';
+	while ($db1->next_record()) {
+		echo '
+		<div class="vm_manufacturer" style="float:left;text-align:center;border:1px solid black;margin:5px;padding:2px;">
+					<img src="'. IMAGEURL .'manufacturer_logo_'.$db1->f('manufacturer_id').'.png" />
+		<br />
+          &nbsp;' . $db1->f('mf_name') . '<br />
+ 		</div>
+		';
+	}
+	echo '<br class="clr" />';
+?>

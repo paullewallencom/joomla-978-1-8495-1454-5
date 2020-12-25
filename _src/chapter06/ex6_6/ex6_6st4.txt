@@ -1,0 +1,5 @@
+<style type="text/css">
+	#vmAddressTable td {vertical-align:top}
+	.label_address {display:none}
+	.label_address_active {display:block}
+</style>
